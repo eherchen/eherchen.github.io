@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Bootstrap Components</title>
+  <title>Data Analysis of Weather Gradients</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,21 +25,22 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Visualizations
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://www.youtube.com">Latitudinal Cloud Gradients</a>
-            <a class="dropdown-item" href="#">Latitudinal Humidity Gradients</a>
-            <a class="dropdown-item" href="#">Latitudinal Windspeed Gradients</a>
-            <a class="dropdown-item" href="#">Latitudinal Temperature Gradients</a>
+                <a class="dropdown-item" href="https://github.com/eherchen/eherchen.github.io/blob/master/cloudymap.png?raw=true">Cloudiness Scatter Plot</a>
+                <a class="dropdown-item" href="https://github.com/eherchen/eherchen.github.io/blob/master/humiditymap.png?raw=true">Humidity Scatter Plot</a>
+                <a class="dropdown-item" href="https://github.com/eherchen/eherchen.github.io/blob/master/windmap.png?raw=true">Windspeed Scatter Plot</a>
+                <a class="dropdown-item" href="https://github.com/eherchen/eherchen.github.io/blob/master/temperaturemap.png?raw=true">Temperature Scatter Plot</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#">Data</a>
+          <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -51,13 +52,47 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1 class="display-4">Climate Zones</h1>
-      <p class="lead">Latitudinal Climate Gradients</p>
+      <h1 class="display-4">World Climate Gradients</h1>
+      <p class="lead">Climate Zones</p>
       <hr class="my-4">
       <p>Here we can display some more text!</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <!-- <p style="color:blue;font-size:28px;font-family:calibri;">Jump to:</p> -->
+      <!-- <div class="icon text-left" height: 15px><i class="icon-tools2"></i><img src="http://chittagongit.com/download/268910" height="182" width="182"></div> -->
+      <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a style="color:blue;font-size:20px;font-family:bookman old style;">Jump to:</a>
+            </li> 
+
+            <li class="nav-item">
+                <a>Data Visualizations</a>               
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <div class="icon text-left" height: 15px><i class="icon-tools2"></i><img src="http://chittagongit.com/images/metric-icon/metric-icon-18.jpg" height="328" width="328"></div>
+                </a>
+            </li>
+            <li class="nav-item">
+                    <a>Data</a>               
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">                    
+                  <div class="icon text-left" height: 15px><i class="icon-tools2"></i><img src="https://freeicons.io/laravel/public/uploads/icons/png/14386704751552641727-512.png" height="328" width="328"></div>
+              </a>
+            </li>
+            </ul>
+
+      
+      <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
     </div>
   </div>
+  <div class="col-md-4 probootstrap-animate fadeInUp probootstrap-animated">
+        <div class="probootstrap-box">
+        <div class="icon text-center"><i class="icon-tools2"></i></div>
+        <h3>Interface Design</h3>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+        </div>
+        </div>
 
   <div class="container">
     <div class="jumbotron">
