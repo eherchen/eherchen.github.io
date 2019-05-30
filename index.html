@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Data Analysis of Weather Gradients</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -56,21 +59,21 @@
       <p class="lead">Searching for Climate Patterns at the Equator</p>
       <hr class="my-4">
       <p>The following weather data was compiled from over 500 cities around the world to highlight global weather patterns over various latitudinal ranges and what this reveals about conditions at the equator.  It takes an approach of comparing 4 key variables to the distances from the equator:
-          <ul>
-            <li>Cloudiness (%) vs. Latitude</li>
-            <li>Humidity (%) vs. Latitude</li>
-            <li>Temperature (F) vs. Latitude</li>
-            <li>Wind Speed (mph) vs. Latitude</li>
+          <ul style="list-style: none;">
+            <li class="icon text-left"><img src="https://cdn2.iconfinder.com/data/icons/asic/50/__-512.png" height="28" width="28">&nbsp;Cloudiness (%) vs. Latitude</li>
+          </br>
+            <li class="icon text-left"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAilBMVEX///8AAAD8/Pzt7e34+Pjw8PDq6urk5OSysrLg4OCFhYXV1dXd3d26urrx8fGlpaXHx8e/v7+VlZVMTEw/Pz+oqKhlZWV3d3cwMDDQ0NB+fn6fn59xcXFfX185OTnJyckfHx9VVVUXFxcrKyuXl5dERESDg4NOTk6NjY0dHR0MDAxiYmITExMtLS0gBCb1AAAPHUlEQVR4nO1da1saPRB10SpWUVErUlBBbctL7f//e2+5bSa750zubOnT81HDkrCZmTOXTI6O/uEf9oLTl/7wstf1LIqh9z6r1phedj2VMhhUBl+7nkwJ3FYSz3/fVu1XNr51PaHceKmaeOp6Snlx1lpgVX3uelI5cQUWWFXXXU8rI37BFVYvXc8rG+Z4gVX1t9jFr2yBVXXV9dyy4AtfYPWr68nlwFhZYFXNu55eOo7VBVbVousJJuPNscJq0PUMEzF3LfDQFerCvcDDVqhDnwVW911PMx6IjSKMup5oNGaeK6z6Xc80Ek++CzxUbXPrXpjBSdezjUDb59Vw1/V0w4FdQo7D84fvA1dYDbuecSA+hy6wqk67nnMQbug6+Lt97HrSIeBC+Ho0of87JMPPX9TZ0dGU/vNw3AzOt29W/yZxqepwRJF79ZP1/7lTfCCi2FuyBUy3I/hPcBhW8YFN/7keck2XeNPhxH3RTMEYHJtB9Fc4AIJ6Suc+lsOotvnzg2/UULxbw7hz/KWjia9wPphM+hf6mHc28Z+NgQM2cGUyu8HkdTOB5a0iKuds2h+toTTW/wyeuwdcfIg58JzRI5s2cOKf2dhOgsSNPcUyf5TMoA9ww++QhBK4aM4BM8jWsB1wRpvGGmflVkIALMAYjWOxtaUpvDi9HY3qn2fElrjvYpTeK5gEIMnU6zW7bpNpe9zZfprU2PM+xSauFYu/ZNO9rYcMGh+mVvF1b4tb4SeeREupM5oiHIaak+8C+TR7ett8ekHQvdfgVzQ8avazeMs7f55Gjfdn9zmRtl0duuEEC5PRm20g/4R9bG/pGjVHLSkk46M/xBiL8Zxv/kYDx3vKZXBPYQ1jM6hAWQpJ6s6PrQmh7G0vflTvP32FtYx9YgPsN2FRgh0NYFZ0erQH3DkWWL8IpjCaZMZ61Vt/iloZyCrygnIOg00RJRWmltG0Qolbu87YbPm4FI+mCKz3Eos9AfpqeRRbUWMeSWlnWC/1qXHNXwIi3JZHsTWpdJ+WVTYONWpwQ0fCIgsrpbEJoNKfqCwD907C02QL2WTWcrZWkVHwkkHwgCQ8AY1G/BCD3jZ/Yp7lQ7kFepX66KDVBxZT21I/ZveLuVF+pT4qFBmydNhmDT3ylFL5fd9SHwVL7UCF9ENmmz+xnGohs++vZSj0XOA3MXIbuSOCX+ZcRrqWcU1MWsVJ+08SJV4ijVtXS+8ChHPHdwi3c7tC5kIXkESl1OdCSRpZ+O78FrNP6vgyCnhVBV4idYQ2rhCNVFtwn9uqTYbh10SBZz8+xJewNl1etU4+/vnOyIuADHHWMhMbfjjCRZMN/Nye05Un9V2Sa/JoP3Z6Onl6Xr7NJ8eOcdzUz3Y7T4lNbeEtOStqfvJl+nX3zkkhisdZxZ7xZUeqR6I4FGavuBhdUBp3+5NuKB4RAbefeCY91KUWiaTZMauE4AcdtYbLUkjUlHvjaWEZce76JgfjS+RhCytHrQeogoq3nu1PkZfo4t/N+czYQJ55buSoVd76KWCBgshspOA7fKTDvLZ5CPmVuRC+NYcqvkdQBld85SZ4SF6i+hDkXOI0NRfCtkXi2iao/E7Si42ax5KonsVEfgJ0bbglROW7czraZZAsCCO/MXtYALRtin9ssE/5xoP7jmuboFoKucM26hT/dPwJjIG0Xjuno4Tc08ISD9otIDy1zf7GxJ8fyKCy1dynvOiVMQrObUKK0sUr2LpR0P2m5769S4758Q9ui3ixb4goGknccjfonjKepEV1rX1K60TUQ/O0/C5EFM2uPNYmTT49V1b4nxjX+2CjmuVoFvgPGJKG33HAWqFB/w27UJyjWE+kxQj2zwDA9W9AnLM3X3/C+EhQtGBpLYtB7lDrJ64zXPUCmGT9xtJ/hUdH4+9fF0JZQpGZoA+60n87aeGbze2r04hASgYXPQ+ZIK49dthqkW/s/x5ZA15+l3B4AkUz0Fz4sYYaazeAWpQPnz5AXBTjk3/IDIHqE58M7iqMxT0hv4OdlM7Gx8iQRZy1Rvmd/xsrrOe99UwMWn4XvU/hy2mN8gvdvnE3yDvawjdB7D5FK2wpZ88kfMWZl//0aLVQbH4TaYZWobiHmtERcnhlzh4SeS4UZUdmjTFaTxgvBNUI0PK7yH2KJKyhS11sxolWYEYHPTIaZ/eRPWxo5ohTuDZCQp4rUPoUlThCD7I3lXcpDEN4nzFmMgI3wxqQJ9neSmoONyIpSWMaEeXMkCZZFJkR0omz388WITHdHSj3C8+NQYfF2u6E77/5Gsk4LsL4+w/3RxuA7rj81RkXHnsSHdWt56DCH2oU4Ya3DD7ZiyuC4UVWYzuLUhsc+BwYFJMckjns63grj73ViD+Jy/ZpoLKBoWbpBpCv0YKREgm+Od2nQXF+HBEWiobslV1IiTes2CKl+y1zSYMkG6dfxQBSkDzUH1Aj7bQ4C5wHMBuchhCcjbxCY8N5umGFxBMAzFUMqEmfwwcIe09eoQhIqBG41A7NLDngbWJJQZaxhkSRyiSFZjHS+/wQU+UdPsU5O2EriONrlZTzJEyGIjnKGP0+TmIqZgsQTdlIcdIV5qiRY1FwL1+Y0UozgijKhnQx8pHl4CZzvn2CBkyAzDFAoidb3h4RljytU1g6yMPHYMbGZE+ImvSdRKZ+YqTC0G2ImFtrCAMJCIH0CuZuQfl3DmYUXS+RBjaNqcPyNQMPIw5WpmNGJErkiJ7SBQrOhz1fmCHDofxMZ8WYslGTkTzyYj6GGV27qcgK+CXm6ipC5FxJ1RzzCLZQwthakveCJTHXEXGiFGmMUkvHC9HBpe7kmZje+aabXCDMhkjilRZcEW8Ib1LqX8PR2Q7Bk9IHuEfUqmp5MgWfA6GdpPGeztV4mrj74CUOeUXkCjI8APc+N7M4AZ+tiSihp42XeHXtOA4vDQE290pZC9xI2RoYEfYh3biTAS3j2cF659B1nClzgH5IvpNi5PDUZtednA0XtALEwE56wDihqhvRB9RTg0EgZv/55/zu2dWpYQeb50HWrdo3+ImgwJ8Kj9CsAw0RQ4pmpk4BmtmMB8VSF9jUeiidoTssUJtmbAOb+BJbfBoNcgRHIj4SAp7d90F7ImiUI5WLbG3OFqkpJ94BnUaBUscLQSotZ0c/5aymC8jlQ3KoO+1Qn+fi3mvwciQHoL5DW05Pv8JoQ9buTB6HMRF+4XgH9JHV74ecPm93++Dm+iuwaAcsglQzSXP0idBCmiYu+gNBGvRCcwy6i6D10RJ32MFJC0ZdrmXF0Ovw2qx7HpHDAX2FtsGXntaaaReRNokU5VI5CC0Whv09XiSKo5ppTX3qYF/NjNy15ta36zsIx5borsahxyTSZn40o8QD1jd1hYzJhiA+MDFVMdVQNYSg1H/z5jVTd5yP1SDAJZIMR5oDLHJjY/A3DQuv2jD26fbO257DaSPt7lOhOQ1f9Fjek68Rpnpr2hDgG+pjJ4bazA83BX/DeBj4f6nCkRbGkPeGnGik9mI0sRljdZRjH28P14F3dWmxncdFf3wxvpmotXupQX2hCup4DxTE+9Hv6URsmLBbstpIbgQjbGw9fegHR/vZHgE6DamcVKoa8yz0TdHiEMYgmshwGZF5mPHwkNjHX2IR7XKukCEDbAINxqtBc4ov3Ek5Z5EjymaYo1khIhcJOS7f405tZOnaa1KYZoXITKdk8YKuVRSIORfRhnmeOQuP3mESO4w8a5EncWieZ0x5XjlcwfdQhYU894CKqi3jpKAUWtqFQCcRS8zUJVTwRqOYkSOa2Hg1fIm52qCawJMQa/SFqf2Be85G4zayXUNgiqHENkTfmB53DrH8P/K1lDb0xSQHYDwoQ/GVuy9evp+zhshTGJ8Whh5y3B937MfC33Jepix+VqNKYRw3meM3v48iLWrRhBF/EXaFDmmuagEnv8mYDj2yJE7k6FAtWlDjExW9a/2YU94GtqJIyJgfmDvI2of84rO2yJyd+QWhmZm/wqrerEnK3zjrf2W1YznvxBSvUJQLQppc5CrOTzDWmPGOYWn3TH4NO6xJkXUKHKbK93zBo4SYwQRiobtHcO1HtpSvDIsKmgs3aalbK2AgOFcnaRmNFpy0cIlnA9g65ukkbYmboEm4LKrU3So46J+nfkbuD7kH4VeWutCBZYFyPNmSNsHIcKFCXqoogY+yZGBullWXQoZd8XJ3x5CIeDoLlnEKGZTEr7DkpXiYvyVLolQz1hFG/ApLXlOlll7HQ65Q7kBSX1rylirSATDZJhpnW/ZEJQdCy96IN8dfmmqB62NiVuqDHDUoe0ssS6GmbpxtSYklYeSIY+lLt4kXFbpPr14W99Xzu9HCL7836pMV8mGHljPWkUOw2I1nVemn/vXk9vPTTke+Ci/opGF0SMjW0dM2A8hlNX55i1YWibtBrBSq/PWpNADnIYrAE2I6ijVy2sdVzSyn4dYAaNaELdB6gtJSuALtwONMeCHtj31Z2u6z/MWiK9CsjSvEh/QwdBN4xz/1Dods4P1UHUtEPTeQ9PIviGyTFgzeNVI3i4BmIrFSehiVCbEBMIvxW91oGrUVGJyhTad02ip9962BVv6m2cVTefDoaQIJptIZtjRfk9A6Rakm+cvT3fxpent9w9x0LTNb8lrYFrRUxjTe5z/Xmhfv6TL43VSUmVTLWJ3OL4asil57C6E3Un6IKR+6UDsH5Cm5CoHj2oTggN+xozYiW7mHPxxp/mWQ2Jy4OjMXSae5JuU6E7+c+KqcU3qNxw55s+m+4BdT1Bj5xFSGjlaTVd6zxSHQW0Ru8Haru8Zjn7NpZaNrGjyrwqcDaKtPxpO51+f3bSckvAvfl3ffJ8OLsw1rvbocD95H3jcTZL/rtswS49HlG1wh8rC1PzKWQkTi2LeRShxy9i+IRc+t7OOxX7ZN4br3Kh4l7n2Pgn8tahDuS6bRAnFeQhj/BBEUCD0278Z+AocBGJMu2ZEYZWuolRHJV9MYvP0xKsbGeeAZBopufCUvDJ0XJ3hglKv1Yhn0U8XxqYNwRSD69M5VDzzkOWVQGjexPG6xt7xEMi4j9OrdPpKfOTEMOjN9P9lryD4XXj7zJJXEU/8gl7fBWX+kR7IfvuQ8N9URehf9xcNjQ8N+PP5cXI//IOchA65Oz1+Gg0F/cDM+P/27lvYPe8P/Y+u5FN4sco8AAAAASUVORK5CYII=" height="28" width="28">&nbsp;Humidity (%) vs. Latitude</li>
+        </br>
+            <li class="icon text-left"><img src="https://banner2.kisspng.com/20180715/tul/kisspng-celsius-degree-symbol-temperature-fahrenheit-degrees-symbol-5b4b39b192ac37.6575489015316566256008.jpg" height="28" width="28">&nbsp;Temperature (F) vs. Latitude</li>
+      </br>
+            <li class="icon text-left"><img src="data:image/png;base64,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" height="28" width="28">&nbsp;Wind Speed (mph) vs. Latitude</li>
           </ul>
           </p>
-        </br>
-      </br>
+       
       <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a style="color:blue;font-size:15px;font-family:bookman old style;">Click any icon to jump to page.</a>
             </li> 
-          
-
             <li class="nav-item">
                 <a style= font-size:40px;>Visualizations</a>               
             </li>
@@ -90,71 +93,15 @@
               </a>
             </li>
             </ul>
-
-      
-      <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+     
     </div>
   </div>
 
+</br>
+</br>
 
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4"></h1>
-      <div class="container">
-        <h3 class="text-center"></h3>
-        <div class="bd-example">
-          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><a target="_blank" href="assets/images/cloudymap.png">
-                    <img src="assets/images/cloudymap.png" alt="Cloudy Map">
-                  </a><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                  <!-- <iframe class="product-iframe" frameborder="0" border="0" src="https://github.com/eherchen/Homework-06-Submission/blob/master/CityLatvsCloudiness.png" style="height: 680px;"></iframe> -->
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect>
-                  </svg>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                  <!-- <iframe class="product-iframe" frameborder="0" border="0" src="https://assets.kele.com/Catalog/22%20Thermostats_Controllers/Web%20Images/RDS120%20web%20family%20photo.jpg" style="height: 564px;"></iframe> -->
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                  <!-- <iframe class="product-iframe" frameborder="0" border="0" src="https://assets.kele.com/Catalog/22%20Thermostats_Controllers/Web%20Images/RDS120%20web%20family%20photo.jpg" style="height: 564px;"></iframe> -->
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-       
+        
+          
 </body>
 
 </html>
