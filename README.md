@@ -1,9 +1,48 @@
 # eherchen.github.io
+The website must consist of 7 pages total, including:
 
-WEATHERPY – OBSERVABLE DATA
-In completing this exercise, I found three major observations from the data: 
 
-•	Trends seen with City Latitude vs Max Temp: As expected, the Max temperature varies based on latitude with tendencies of a higher max temperature as you approach the equator, highest at the equator and then starting to decline as you descend from the equator. 
-•	Trends seen with City Latitude and Wind Speed: It appears that a larger share of the sample of cities has a wind speed ranging from 0 -15 mph, however there doesn’t seem to be any indication that wind speed has a relationship with latitude. This might have the possibility of varying during different times of year.
-•	Trends seen with City Latitude vs Humidity: It appears that a larger share of the sample of cities has a humidity level ranging from 60 -100%, regardless of their latitude.  Also noting that cities at the equator seem to reflect a humidity levels of at least 40% or above. This might have the possibility of varying during different times of year.
+A landing page containing:
+
+
+An explanation of the project.
+Links to each visualizations page.
+
+
+Four visualization pages, each with:
+
+
+A descriptive title and heading tag.
+The plot/visualization itself for the selected comparison.
+A paragraph describing the plot and its significance.
+
+
+A "Comparisons" page that:
+
+
+Contains all of the visualizations on the same page so we can easily visually compare them.
+Uses a bootstrap grid for the visualizations.
+The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
+
+
+A "Data" page that:
+
+
+Displays a responsive table containing the data used in the visualizations.
+The table must be a bootstrap table component.
+The data must come from exporting the .csv file as HTML, or converting it to HTML. You may use a csv-to-html table conversion tool, e.g. ConvertCSV.
+
+
+
+
+The website must, at the top of every page, have a navigation menu that:
+
+
+Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
+Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
+Is responsive (using media queries). The nav must have similar behavior as the screenshots "Navigation Menu" section (notice the background color change).
+
+
+Finally, the website must be deployed to GitHub pages.
 
